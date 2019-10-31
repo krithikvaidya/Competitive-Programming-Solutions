@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string str;
+    getline(cin, str);
+
+    vector<int> numbers;
+
+    for(int i = 0; i < str.length(); i+=2)
+        numbers.push_back(str[i] - '0');
+
+    sort(numbers.begin(), numbers.end());
+
+    cout<<numbers[0];
+
+    for(int i = 1; i < numbers.size(); i++)
+        cout<<"+"<<numbers[i];
+}

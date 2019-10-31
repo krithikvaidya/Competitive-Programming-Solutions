@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    long long int l;
+
+    cin>>n>>l;
+
+    long long int ai[n];
+
+    for(int i = 0; i < n; i++)
+    {
+        cin>>ai[i];
+    }
+
+    sort(ai, ai + (sizeof(ai)/sizeof(ai[0])));
+
+    long long int max_dist = ai[0] * 2;
+
+    for(int i = 1; i < n; i++)
+    {
+        if(ai[i] - ai[i-1] > max_dist)
+            max_dist = ai[i] - ai[i-1];
+    }
+
+    if((l - ai[n-1]) * 2 > max_dist)
+        max_dist = (l - ai[n-1]) * 2;
+
+    cout.precision(20);
+
+    cout<<fixed<<(max_dist * 1.0)/2;
+}

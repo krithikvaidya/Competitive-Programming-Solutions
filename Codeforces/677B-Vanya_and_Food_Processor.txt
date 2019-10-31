@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, h, k;
+    cin>>n>>h>>k;
+
+    int a[n];
+
+    for(int i = 0; i < n; i++)
+        cin>>a[i];
+
+    long long current_height = 0;
+    long long time = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        current_height += a[i];
+        if(current_height > h)
+        {
+            current_height -= a[i];
+
+            if(current_height < k)
+            {
+                time++;
+                current_height = 0;
+            }
+            time += current_height/k;
+            current_height = current_height % k;
+
+            i--;
+        }
+    }
+
+    if(current_height % k == 0)
+    {
+        time += current_height/k;
+    }
+    else
+        time += current_height/k + 1;
+
+    cout<<time;
+}

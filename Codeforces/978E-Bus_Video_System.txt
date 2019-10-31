@@ -1,0 +1,71 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, w;
+    cin>>n>>w;
+
+    int maxi = 0;
+    int mini = 0;
+
+    int a[n];
+
+    for(int i = 0; i < n; i++)
+        cin>>a[i];
+
+    int curr_sign = a[0];
+    int curr_value = a[0];
+
+    if(curr_sign < 0)
+        mini += curr_value;
+    else
+        maxi += curr_value;
+
+    for(int i = 1; i < n; i++)
+    {
+        if(a[i] >= 0 && curr_sign < 0)
+        {
+            if(curr_value < mini)
+                mini = curr_value;
+            curr_sign = a[i] + 1;
+            curr_value += a[i];
+        }
+        else if(a[i] < 0 && curr_sign > 0)
+        {
+            if(curr_value > maxi)
+                maxi = curr_value;
+            curr_sign = a[i];
+            curr_value += a[i];
+        }
+        else
+        {
+            curr_value += a[i];
+        }
+    }
+
+    if(a[n - 1] >= 0 && curr_sign > 0)
+    {
+        if(curr_value > maxi)
+            maxi = curr_value;
+    }
+    else if(a[n - 1] < 0 && curr_sign < 0)
+    {
+        if(curr_value < mini)
+            mini = curr_value;
+    }
+
+    int ctr = 0;
+
+    if(mini < 0)
+        mini = -mini;
+    else
+        mini = 0;
+
+    for(int i = mini; i <= w - maxi; i++)
+        ctr++;
+    //All nos >= min && <= (capacity - max)
+
+    cout<<ctr;
+}

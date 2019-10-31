@@ -1,0 +1,46 @@
+# include <bits/stdc++.h>
+# define ll long long
+
+using namespace std;
+
+int S(ll x)
+{
+    int sum = 0;
+    while(x > 0)
+    {
+        sum += x % 10;
+        x /= 10;
+    }
+    return sum;
+}
+
+int main()
+{
+    int a, b, c;
+    cin>>a>>b>>c;
+
+    ll x;
+    ll ctr = 0;
+
+    vector<ll> answers;
+
+    for(int i = 1; i <= 81; i++)
+    {
+        x = 1;
+        for(int j = 0; j < a; j++)
+            x *= i;
+
+        x *= b;
+        x += c;
+
+        if(S(x) == i && x < 1000000000)
+        {
+            ctr++;
+            answers.push_back(x);
+        }
+    }
+
+    cout<<ctr<<"\n";
+    for(int i = 0; i < ctr; i++)
+        cout<<answers[i]<<" ";
+}

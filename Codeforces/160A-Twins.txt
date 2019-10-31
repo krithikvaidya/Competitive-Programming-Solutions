@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, temp, total_value = 0;
+    cin>>n;
+
+    short no_of_coins[101] = {0};
+
+    for(int i = 0; i < n; i++)
+    {
+        cin>>temp;
+        no_of_coins[temp] += 1;
+        total_value += temp;
+    }
+
+    int coin_count = 0;
+    int current_total = 0;
+
+    for(int i = 100; i >= 0; i--)
+    {
+        for(int j = 1; j <= no_of_coins[i]; j++)
+        {
+            if(current_total + i > total_value - i)
+            {
+                coin_count++;
+                cout<<coin_count;
+                exit(0);
+            }
+            else
+            {
+                current_total += i;
+                total_value -= i;
+                coin_count++;
+            }
+
+        }
+    }
+}

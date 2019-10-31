@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cin>>n>>m;
+
+    string answers[n];
+    char temp;
+
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < m; j++)
+        {
+            cin>>temp;
+            if(temp == '-')
+                answers[i].push_back('-');
+            else if(i % 2 == 0)
+            {
+                if(j % 2 == 0)
+                    answers[i].push_back('B');
+                else
+                    answers[i].push_back('W');
+            }
+            else if(i % 2 == 1)
+            {
+                if(j % 2 == 0)
+                    answers[i].push_back('W');
+                else
+                    answers[i].push_back('B');
+            }
+        }
+    }
+
+
+    for(int i = 0; i < n; i++)
+        cout<<answers[i]<<endl;
+}

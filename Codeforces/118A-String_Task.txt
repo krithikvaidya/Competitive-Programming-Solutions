@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string str;
+    char ch;
+    getline(cin, str);
+
+    int length = str.length();
+
+    bool is_vowel[123] = { false };
+
+    is_vowel['a'] = true;
+    is_vowel['e'] = true;
+    is_vowel['i'] = true;
+    is_vowel['o'] = true;
+    is_vowel['u'] = true;
+    is_vowel['y'] = true;
+
+    for(int i = 0; i < length; i++)
+    {
+        ch = tolower(str[i]);
+        if(!is_vowel[ch])
+            cout<<"."<<ch;
+    }
+}

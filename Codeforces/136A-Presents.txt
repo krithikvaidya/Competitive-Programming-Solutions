@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    short int n;
+    cin>>n;
+
+    int giftGivenTo;
+    int giftReceivedFrom[n+1];
+
+    for(int i = 1; i <= n; i++)
+    {
+        cin>>giftGivenTo;
+        giftReceivedFrom[giftGivenTo] = i;
+    }
+
+    for(int i = 1; i <= n; i++)
+        cout<<giftReceivedFrom[i]<<" ";
+}

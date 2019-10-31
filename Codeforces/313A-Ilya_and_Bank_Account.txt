@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    if(n >= 10)
+    {
+        cout<<n;
+        exit(0);
+    }
+
+    int last_dig;
+    last_dig = n % 10;
+
+    n/=10;
+
+    int temp = n;
+
+    n = (n / 10) * 10 + last_dig;
+
+    if(n > temp)
+        cout<<n;
+    else
+        cout<<temp;
+}

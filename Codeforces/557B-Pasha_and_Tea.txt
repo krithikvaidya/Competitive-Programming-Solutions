@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define ll long long
+int main()
+{
+    ll n, w;
+    cin>>n>>w;
+
+    n *= 2;
+    ll capacities[n];
+
+    for(ll i = 0; i < n; i++)
+    {
+        cin>>capacities[i];
+    }
+
+    sort(capacities, capacities + sizeof(capacities)/sizeof(capacities[0]));
+
+    ll min_girl = capacities[0];
+    ll min_boy = capacities[n/2];
+
+    long double x = ((long double)w)/((long double)(1.5 * n));
+
+    if(2 * x > min_boy || x > min_girl)
+    {
+
+        x = ((long double)min_boy)/((long double)2) < (long double)min_girl? ((long double)min_boy)/((long double)2):(long double)min_girl;
+    }
+
+    long double water = ((n/2) * x) + ((n) * x);
+
+    cout<<fixed<<setprecision(6)<<water;
+}

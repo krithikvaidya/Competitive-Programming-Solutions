@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin, s);
+
+    int len = s.length();
+
+    int m, temp;
+    cin>>m;
+
+    int posns[len] = { 0 };
+
+    for(int i = 0; i < m; i++)
+    {
+        cin>>temp;
+        posns[temp - 1]++;
+    }
+
+    int count = 0;
+    char ch;
+
+    for(int i = 0; i < len / 2; i++)
+    {
+        count += posns[i];
+        if(count % 2 != 0)
+        {
+            ch = s[i];
+            s[i] = s[len - 1 - i];
+            s[len - 1 - i] = ch;
+        }
+    }
+
+    cout<<s;
+}

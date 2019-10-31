@@ -1,0 +1,118 @@
+#include <bits/stdc++.h>
+
+#define ll long long
+#define DEBUG(x) cout << '>' << #x << ':' << x << endl;
+#define REP(i,n) for(int i=0;i<(n);i++)
+#define FOR(i,a,b) for(int i=(a);i<=(b);i++)
+#define FORD(i,a,b) for(int i=(a);i>=(b);i--)
+inline bool EQ(double a, double b) { return fabs(a-b) < 1e-9; }
+
+using namespace std;
+
+int main()
+{
+    int T;
+    cin>>T;
+
+    ll answers[T];
+
+    for(ll i = 0ll; i < T; i++)
+    {
+        ll k, x, a, b;
+        cin>>k>>x>>a>>b;
+
+        ll a_ctr = 0ll, b_ctr;
+        ll remain = 0ll;
+
+        if(k/a > x)
+            answers[i] = x;
+        else if(k/a == x && k % a != 0ll)
+            answers[i] = x;
+        else if(k/a == x && k % a == 0ll)
+        {
+            answers[i] = x - 1;
+        }
+        else if(k/a < x)
+        {
+            if((b * x >= k))
+            {
+                answers[i] = -1;
+                continue;
+            }
+
+            ll j = 0ll;
+
+
+            x -= (a*x - k)/(a - b);
+            x--;
+            answers[i] = x;
+
+            /**if(k % a == 0ll)
+            {
+                a_ctr = k/a - 1ll;
+                remain = a;
+            }
+            else
+            {
+                a_ctr = k/a;
+                remain = k%a;
+            }
+
+            b_ctr = 0ll;
+
+            long long t;
+
+            if((b * x - remain - (b * a_ctr)) < 0)
+            {
+                t = 0;
+            }
+            else if((b * x - remain - (b * a_ctr)) % (a - b) == 0ll)
+                t = (b * x - remain - (b * a_ctr)) / (a - b);
+            else
+                t = 1 + ((b * x - remain - (b * a_ctr))) / (a - b);
+
+            if(a_ctr - t < 0 || (b * x >= k))
+                answers[i] = -1;
+            else
+                answers[i] = a_ctr - t;
+
+
+            int flag = 0;
+
+            remain
+            while(a_ctr + b_ctr < x)
+            {
+                if(remain%b != 0)
+                {
+                    b_ctr += remain/b;
+                    remain = remain%b;
+                }
+                else
+                {
+                    b_ctr += (remain/b) - 1;
+                    remain = b;
+                }
+
+                if(a_ctr + b_ctr >= x)
+                    break;
+
+                if(a_ctr == 0)
+                {
+                    answers[i] = -1;
+                    flag = 1;
+                    break;
+                }
+
+                a_ctr--;
+                remain += a;
+            }
+
+            if(flag == 0)
+                answers[i] = a_ctr;
+                */
+        }
+    }
+
+    for(int i = 0; i < T; i++)
+        cout<<answers[i]<<"\n";
+}

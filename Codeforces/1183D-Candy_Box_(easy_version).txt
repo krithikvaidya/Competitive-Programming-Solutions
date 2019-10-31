@@ -1,0 +1,62 @@
+#include <bits/stdc++.h>
+
+#define ll long long
+#define DEBUG(x) cout << '>' << #x << ':' << x << endl;
+#define REP(i,n) for(int i=0;i<(n);i++)
+#define FOR(i,a,b) for(int i=(a);i<=(b);i++)
+#define FORD(i,a,b) for(int i=(a);i>=(b);i--)
+inline bool EQ(double a, double b) { return fabs(a-b) < 1e-9; }
+
+using namespace std;
+
+int main()
+{
+    int T;
+    cin>>T;
+
+    int answers[T];
+
+    for(int i = 0; i < T; i++)
+    {
+        int n;
+        cin>>n;
+
+        int temp;
+        int total = 0;
+
+        int cnt[n + 1] = { 0 };
+
+        for(int j = 0; j < n; j++)
+        {
+            cin>>temp;
+            cnt[temp]++;
+        }
+
+        sort(cnt, cnt + sizeof(cnt)/sizeof(cnt[0]), greater<int>());
+
+        temp = cnt[0] - 1;
+        total = cnt[0];
+
+        for(int j = 1; j < n; j++)
+        {
+            if(cnt[j] == 0 || temp <= 0)
+                break;
+
+            if(cnt[j] >= temp)
+            {
+                total += temp;
+                temp--;
+            }
+            else
+            {
+                total += cnt[j];
+                temp = cnt[j] - 1;
+            }
+        }
+
+        answers[i] = total;
+    }
+
+    for(int i = 0; i < T; i++)
+        cout<<answers[i]<<"\n";
+}

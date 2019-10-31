@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    int ptr1 = n-2;
+    int ptr2 = n-1;
+
+    int d[n];
+
+    for(int i = 0; i < n; i++)
+        cin>>d[i];
+
+    long long int sum1 = 0, sum3 = 0;
+
+    for(int i = 0; i <= ptr1; i++)
+        sum1 += d[i];
+
+    sum3 = d[ptr2];
+
+    while(sum1 > sum3 && ptr1 >= 0)
+    {
+        sum1 -= d[ptr1];
+        sum3 += d[ptr1];
+        ptr1--;
+        ptr2--;
+    }
+
+    if(sum1 == sum3)
+        cout<<sum1;
+    else
+    {
+        while(sum1 != sum3 && ptr1 >= 0 && ptr2 < n)
+        {
+            if(sum1 > sum3)
+            {
+                sum1 -= d[ptr1];
+                ptr1--;
+            }
+            else
+            {
+                sum3 -= d[ptr2];
+                ptr2++;
+            }
+        }
+
+        if(sum1 != sum3)
+            sum1 = 0;
+
+        cout<<sum1;
+    }
+
+
+}

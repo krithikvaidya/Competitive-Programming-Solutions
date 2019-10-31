@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long int lli;
+int main()
+{
+    lli n, k;
+    cin>>n>>k;
+    lli residue = n%k;
+    lli normal = n/k;
+    lli residuepairs = (normal+1)*(normal)/2*residue;
+    lli normalpairs = (k-residue)*(normal)*(normal-1)/2;
+    cout<<normalpairs+residuepairs<<" ";
+    cout<<(n-k+1)*(n-k)/2;
+
+}

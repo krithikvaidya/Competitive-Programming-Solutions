@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    string s;
+
+    cin>>n;
+    cin.ignore();
+
+    getline(cin, s);
+    int hmm = s.length();
+
+    int ctr = 0;
+    int flag;
+
+    label:
+    flag = 0;
+
+    for(int i = 0; i < hmm - 1; i += 2)
+    {
+        if(s[i] == s[i+1])
+        {
+            s.erase(s.begin() + i);
+            ctr++;
+            hmm--;
+            i -= 2;
+            flag = 1;
+        }
+    }
+
+    if(flag)
+        goto label;
+
+    if((hmm) % 2 == 0)
+        cout<<ctr<<"\n"<<s;
+    else
+        cout<<ctr+1<<"\n"<<s.substr(0,hmm - 1);
+}

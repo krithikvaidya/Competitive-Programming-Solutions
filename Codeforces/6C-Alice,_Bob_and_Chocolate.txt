@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    int bBars = 0, aBars = 0;
+    int current_time_b = 0, current_time_a = 0;
+
+    int choc[n];
+    for(int i = 0; i < n; i++)
+        cin>>choc[i];
+
+    int j = n - 1;
+
+    for(int i = 0; i < n; )
+    {
+        if(i > j)
+            break;
+
+        if(current_time_a < current_time_b)
+        {
+            current_time_a += choc[i];
+            i++;
+            aBars++;
+        }
+        else if(current_time_a > current_time_b)
+        {
+            current_time_b += choc[j];
+            j--;
+            bBars++;
+        }
+        else
+        {
+            if(i == j)
+            {
+                aBars++;
+                break;
+            }
+            else
+            {
+                current_time_a += choc[i];
+                current_time_b += choc[j];
+                i++;
+                j--;
+                aBars++;
+                bBars++;
+            }
+        }
+    }
+
+    cout<<aBars<<" "<<bBars;
+}

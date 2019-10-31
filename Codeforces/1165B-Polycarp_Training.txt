@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    int problem_count[n];
+    for(int i = 0; i < n; i++)
+        cin>>problem_count[i];
+
+    sort(problem_count, problem_count + (sizeof(problem_count)/sizeof(problem_count[0])));
+
+    int days = 1;
+    int i = 0;
+
+    while(true)
+    {
+        if(i > n - 1)
+            break;
+        if(problem_count[i] > days)
+        {
+            //cout<<"hm1m";
+            i++;
+            days++;
+        }
+        else if(problem_count[i] == days)
+        {
+            //cout<<"hm2m";
+            days++;
+            while(i < n - 1 && problem_count[i] == problem_count[i+1])
+            {
+                i++;
+                //cout<<"hm3m";
+            }
+            i++;
+        }
+        else
+            break;
+    }
+
+    cout<<days-1;
+}

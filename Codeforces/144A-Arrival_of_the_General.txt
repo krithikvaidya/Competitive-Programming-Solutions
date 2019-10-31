@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    short n;
+    cin>>n;
+
+    short heights[n];
+    int max_ht = 0;
+    int min_ht = 101;
+
+    int max_ht_index, min_ht_index;
+
+    for(int i = 0; i < n; i++)
+    {
+        cin>>heights[i];
+        if(heights[i] > max_ht)
+        {
+            max_ht_index = i;
+            max_ht = heights[i];
+        }
+
+        if(heights[i] <= min_ht)
+        {
+            min_ht_index = i;
+            min_ht = heights[i];
+        }
+    }
+
+    if(max_ht_index < min_ht_index)
+        cout<<max_ht_index + (n - 1 - min_ht_index);
+    else
+        cout<<(max_ht_index + (n - 1 - min_ht_index - 1));
+}

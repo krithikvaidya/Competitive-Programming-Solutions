@@ -1,0 +1,80 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    int a[n];
+    for(int i = 0; i < n; i++)
+        cin>>a[i];
+
+    int flag = 1;
+
+    int first, last;
+    int first_rev, last_rev;
+
+    int first_index = 1, last_index = 1;
+
+    for(int i = 1; i < n; i++)
+    {
+        if(a[i] > a[i - 1])
+            continue;
+        else if(a[i] < a[i - 1] && flag)
+        {
+            int j;
+            if(i >= 2)
+            {
+                first_index = i;
+                first = a[i - 2];
+                first_rev = a[i - 1];
+
+                for(j = i + 1; j < n && a[j] < a[j - 1]; j++);
+
+                last_index = j;
+                last_rev = a[j - 1];
+                if(j != n)
+                    last = a[j];
+                else
+                    last = 1000000001;
+            }
+
+            if(i < 2)
+            {
+                first_index = i;
+                first = -1;
+                first_rev = a[i - 1];
+
+                for(j = i + 1; (j < n) && (a[j] < a[j - 1]); j++);
+
+                last_index = j;
+                last_rev = a[j - 1];
+                if(j != n)
+                    last = a[j];
+                else
+                    last = 1000000001;
+
+            }
+            if(first_rev < last && last_rev > first)
+            {
+                i = j;
+                flag = 0;
+            }
+            else
+            {
+                cout<<"no";
+                exit(0);
+            }
+
+        }
+        else if(a[i] < a[i - 1] && !flag)
+        {
+            cout<<"no";
+            exit(0);
+        }
+    }
+
+    cout<<"yes\n"<<first_index<<" "<<last_index;
+}

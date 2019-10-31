@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, m, k;
+
+    cin>>n>>m>>k;
+
+    int soldiers[m + 1];
+    int friend_count = 0;
+
+    for(int i = 0; i < m; i++)
+        cin>>soldiers[i];
+
+    cin>>soldiers[m];
+
+    string fedor_soldiers_types = bitset<32>(soldiers[m]).to_string();
+
+    int temp = 0, j;
+    for(int i = 0; i < m; i++)
+    {
+        string soldier_type = bitset<32>(soldiers[i]).to_string();
+        temp = 0;
+        for(j = 31; j >= 0; j--)
+        {
+            if(fedor_soldiers_types[j] != soldier_type[j])
+            {
+                temp++;
+                if(temp > k)
+                    break;
+            }
+        }
+
+        if(j == -1)
+            friend_count++;
+    }
+
+    cout<<friend_count;
+}

@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    int distances[n];
+    string dir[n];
+
+    int dist = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        cin>>distances[i]>>dir[i];
+    }
+
+    for(int i = 0; i < n; i++)
+    {
+        if((dist == 0) && !(dir[i] == "South"))
+        {
+            cout<<"NO";
+            exit(0);
+        }
+        else if(dist == 20000 && !(dir[i] == "North"))
+        {
+            cout<<"NO";
+            exit(0);
+        }
+        else if(dist > 20000 || dist < 0)
+        {
+            cout<<"NO";
+            exit(0);
+        }
+        else
+        {
+            if(!dir[i].compare("North"))
+            {
+                dist -= distances[i];
+
+            }
+
+            else if(!dir[i].compare("South"))
+            {
+                dist += distances[i];
+
+            }
+        }
+    }
+
+    if(dist == 0)
+        cout<<"YES";
+    else
+        cout<<"NO";
+}

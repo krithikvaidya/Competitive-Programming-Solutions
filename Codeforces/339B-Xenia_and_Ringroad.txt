@@ -1,0 +1,33 @@
+//12-05-2019
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cin>>n>>m;
+
+    int house_number[m];
+
+    for(int i = 0; i < m; i++)
+    {
+        cin>>house_number[i];
+    }
+
+    long long int move_count = 0;
+    int current_house = 1;
+
+    for(int i = 0; i < m; i++)
+    {
+        if(house_number[i] < current_house)
+            move_count += (n - current_house) + house_number[i];
+        else
+            move_count += house_number[i] - current_house;
+
+        current_house = house_number[i];
+    }
+
+    cout<<move_count;
+}

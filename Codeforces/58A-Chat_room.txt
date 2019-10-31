@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+    string str;
+    cin>>str;
+
+    string hello = "hello";
+    int hello_index = 0;
+
+    for(int i = 0; i < str.length(); i++)
+    {
+        if(str[i] == hello[hello_index])
+        {
+            if(hello_index == 4)
+            {
+                cout<<"YES";
+                exit(0);
+            }
+            else
+                hello_index++;
+        }
+    }
+
+    cout<<"NO";
+}

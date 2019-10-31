@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, temp;
+    cin>>n;
+
+    for(int i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            temp = i;
+
+            while(temp > 0)
+            {
+                if(temp % 10 != 4 && temp % 10 != 7)
+                    break;
+                temp /= 10;
+            }
+
+            if(temp == 0)
+            {
+                cout<<"YES";
+                exit(0);
+            }
+        }
+    }
+
+    cout<<"NO";
+}

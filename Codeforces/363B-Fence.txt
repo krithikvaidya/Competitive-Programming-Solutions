@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, k;
+    cin>>n>>k;
+
+    int min = INT_MAX, ind = 0, sum = 0, first, last;
+
+    int ht[n];
+    for(int i = 0; i < n; i++)
+        cin>>ht[i];
+
+    for(int i = 0; i < k; i++)
+        sum += ht[i];
+
+    ind = 0;
+    min = sum;
+    first = 1;
+    last = k;
+
+    while(last < n)
+    {
+        sum += ht[last] - ht[first - 1];
+
+        if(sum < min)
+        {
+            min = sum;
+            ind = first;
+        }
+
+        last++;
+        first++;
+    }
+
+    cout<<ind + 1;
+}

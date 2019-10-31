@@ -1,0 +1,53 @@
+// sunlight = prefer battery. but if accumulator at max charge, use accumulator
+// no sunlight = prefer acc. if acc = 0, use battery
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, b, a;
+    cin>>n>>b>>a;
+
+    int b_charge = b;
+    int a_charge = a;
+
+    short sunlight[n];
+
+    for(int i = 0; i < n; i++)
+        cin>>sunlight[i];
+
+    int i;
+
+    for(i = 0; i < n; i++)
+    {
+        if(sunlight[i])
+        {
+            if(a_charge == a)
+                a_charge--;
+
+            else if(b_charge != 0)
+            {
+                b_charge--;
+                a_charge++;
+            }
+
+            else if(b_charge == 0 && a_charge == 0)
+                break;
+            else
+                a_charge--;
+        }
+        else
+        {
+            if(a_charge != 0)
+                a_charge--;
+            else if(b_charge != 0)
+                b_charge--;
+            else
+                break;
+        }
+    }
+
+    cout<<i;
+}

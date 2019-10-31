@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string song;
+    cin>>song;
+
+    vector<string> words;
+    string word;
+
+    for(int i = 0; i < song.length(); i++)
+    {
+        if(song.substr(i, 3) == "WUB")
+            i += 2;
+        else
+        {
+            word = "";
+            while(song.substr(i, 3) != "WUB" && i < song.length())
+            {
+                word += song[i];
+                i++;
+            }
+            words.push_back(word);
+            i--;
+        }
+    }
+
+    for(int i = 0; i < words.size(); i++)
+        cout<<words[i]<<" ";
+}

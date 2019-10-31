@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int s, n;
+    cin>>s>>n;
+
+    vector < pair <int, int> > dragons;
+
+    int temp1, temp2;
+    for(int i = 0; i < n; i++)
+    {
+        cin>>temp1>>temp2;
+        dragons.push_back(make_pair(temp1, temp2));
+    }
+
+    sort(dragons.begin(), dragons.end());
+
+    int curr_str = s;
+
+    for(int i = 0; i < n; i++)
+    {
+        if(curr_str > dragons[i].first)
+            curr_str += dragons[i].second;
+        else
+        {
+            cout<<"NO";
+            exit(0);
+        }
+    }
+
+    cout<<"YES";
+}

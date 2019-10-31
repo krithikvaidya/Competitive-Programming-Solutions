@@ -1,0 +1,39 @@
+// each should not exceed n
+// each should be positive
+// each should be distinct
+
+// first set of moves - ensure all elements < n
+// second - all elements > 0
+// then sort
+// if current element == prev element
+// then first try to decrease prev element - if this already exists, increase
+// goto next element, repeat
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    int numbers[n];
+
+    for(int i = 0; i < n; i++)
+        cin>>numbers[i];
+
+    sort(numbers, numbers + sizeof(numbers)/sizeof(numbers[0]));
+
+    long long int moves = 0ll;
+
+    for(int i = 1 ; i <= n; i++)
+    {
+        moves += abs(i - numbers[i - 1]);
+        numbers[i - 1] = i;
+    }
+
+    cout<<moves;
+
+}
+

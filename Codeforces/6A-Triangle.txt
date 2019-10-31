@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int arr[4];
+    cin>>arr[0]>>arr[1]>>arr[2]>>arr[3];
+
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    sort(arr, arr+n);
+
+    if((arr[0] + arr[1] > arr[2]) || (arr[1] + arr[2] > arr[3]))
+        cout<<"TRIANGLE";
+    else if(arr[0] + arr[1] == arr[2] || arr[1] + arr[2] == arr[3])
+        cout<<"SEGMENT";
+    else
+        cout<<"IMPOSSIBLE";
+}
+
+
+

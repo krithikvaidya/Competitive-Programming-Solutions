@@ -1,0 +1,55 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<bool> is_prime;
+
+void calc_primes()
+{
+    for(int i = 0; i < 1000001; i++)
+        is_prime.push_back(true);
+
+    is_prime[0] = is_prime[1] = false;
+
+    for (int p=2; p*p<=1000000; p++)
+    {
+        if (is_prime[p] == true)
+        {
+            for (int i=p*2; i<=1000000; i += p)
+                is_prime[i] = false;
+        }
+    }
+}
+
+bool isPerfectSquare(long long int n)
+{
+    double sq_rt = sqrt(n);
+    if(sq_rt == int(sq_rt))
+        return true;
+    else
+        return false;
+}
+int main()
+{
+    calc_primes();
+
+    int n;
+    cin>>n;
+
+    long long int numbers[n];
+
+    for(int i = 0; i < n; i++)
+        cin>>numbers[i];
+
+    for(int i = 0; i < n; i++)
+    {
+        if(numbers[i] == 4)
+            cout<<"YES\n";
+        else if(numbers[i] % 2 == 0)
+            cout<<"NO\n";
+        else if(isPerfectSquare(numbers[i]) && is_prime[(int)sqrt(numbers[i])])
+            cout<<"YES\n";
+        else
+            cout<<"NO\n";
+    }
+}

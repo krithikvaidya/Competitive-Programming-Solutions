@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cin>>n>>m;
+
+    int val = n<m?n:m;
+
+    if(val % 2 == 0)
+        cout<<"Malvika";
+    else
+        cout<<"Akshat";
+    /* int i = 0;
+    int count = n * m;
+    while(count > 0)
+    {
+        count /= 2;
+        i++;
+    }
+
+    if(i == 1)
+        cout<<"Akshat";
+    else
+    {
+        if(i % 2 == 0)
+        {
+            if(n * m % 2 != 0)
+                cout<<"Akshat";
+            else
+                cout<<"Malvika";
+        }
+
+        else
+        {
+            if(n * m % 2 != 0)
+                cout<<"Malvika";
+            else
+                cout<<"Akshat";
+        }
+    } */
+
+}

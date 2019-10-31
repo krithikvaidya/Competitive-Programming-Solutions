@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin, s);
+
+    if(s.length() == 2)
+    {
+        cout<<0;
+        exit(0);
+    }
+    int appearance[123] = { 0 };
+    for(int i = 1; i < s.length(); i += 3)
+    {
+        appearance[s[i]]++;
+    }
+
+    int ctr = 0;
+    for(int i = 97; i <= 122; i++)
+        if(appearance[i] != 0)
+            ctr++;
+
+    cout<<ctr;
+}
