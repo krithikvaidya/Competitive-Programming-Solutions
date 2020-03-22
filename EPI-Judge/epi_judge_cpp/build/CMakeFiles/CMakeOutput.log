@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/x86_64-linux-gnu-g++-7 
@@ -23,22 +23,22 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_eb1b4"
-[1/2] Building C object CMakeFiles/cmTC_eb1b4.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_eb1b4
+Run Build Command:"/usr/bin/ninja" "cmTC_8d36c"
+[1/2] Building C object CMakeFiles/cmTC_8d36c.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_8d36c
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_160b4"
-[1/2] Building C object CMakeFiles/cmTC_160b4.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_160b4
+Run Build Command:"/usr/bin/ninja" "cmTC_a13c7"
+[1/2] Building C object CMakeFiles/cmTC_a13c7.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_a13c7
 Using built-in specs.
 COLLECT_GCC=/usr/bin/x86_64-linux-gnu-gcc-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -50,18 +50,18 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_160b4' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdmwWHN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_160b4 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_160b4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_160b4' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a13c7' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFxV3iC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a13c7 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a13c7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a13c7' '-mtune=generic' '-march=x86-64'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_160b4"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_160b4.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_160b4]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_a13c7"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_a13c7.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_a13c7]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/x86_64-linux-gnu-gcc-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -73,13 +73,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_160b4' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdmwWHN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_160b4 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_160b4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a13c7' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFxV3iC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a13c7 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a13c7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccdmwWHN.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccFxV3iC.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -97,7 +97,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_160b4] ==> ignore
+    arg [cmTC_a13c7] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_160b4.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_a13c7.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -139,11 +139,11 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_c3372"
-[1/2] Building C object CMakeFiles/cmTC_c3372.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_c3372
+Run Build Command:"/usr/bin/ninja" "cmTC_408e8"
+[1/2] Building C object CMakeFiles/cmTC_408e8.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_408e8
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -153,11 +153,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_c3372"
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_6eb37"
-[1/2] Building C object CMakeFiles/cmTC_6eb37.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_6eb37
+Run Build Command:"/usr/bin/ninja" "cmTC_cf0fd"
+[1/2] Building C object CMakeFiles/cmTC_cf0fd.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_cf0fd
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -167,11 +167,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_6eb37"
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_133bf"
-[1/2] Building C object CMakeFiles/cmTC_133bf.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_133bf
+Run Build Command:"/usr/bin/ninja" "cmTC_ad2b8"
+[1/2] Building C object CMakeFiles/cmTC_ad2b8.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_ad2b8
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -179,19 +179,19 @@ Run Build Command:"/usr/bin/ninja" "cmTC_133bf"
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_68eec"
-[1/2] Building CXX object CMakeFiles/cmTC_68eec.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_68eec
+Run Build Command:"/usr/bin/ninja" "cmTC_a3a6a"
+[1/2] Building CXX object CMakeFiles/cmTC_a3a6a.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_a3a6a
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_2693e"
-[1/2] Building CXX object CMakeFiles/cmTC_2693e.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_2693e
+Run Build Command:"/usr/bin/ninja" "cmTC_088a0"
+[1/2] Building CXX object CMakeFiles/cmTC_088a0.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_088a0
 Using built-in specs.
 COLLECT_GCC=/usr/bin/x86_64-linux-gnu-g++-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -203,18 +203,18 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2693e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cczuZbG6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2693e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_2693e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2693e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_088a0' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUrknIH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_088a0 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_088a0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_088a0' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_2693e"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_2693e.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_2693e]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_088a0"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_088a0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_088a0]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/x86_64-linux-gnu-g++-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -226,13 +226,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2693e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cczuZbG6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2693e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_2693e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_088a0' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUrknIH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_088a0 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_088a0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cczuZbG6.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccUrknIH.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -250,7 +250,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2693e] ==> ignore
+    arg [cmTC_088a0] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -262,7 +262,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_2693e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_088a0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -288,11 +288,11 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_ae28a"
-[1/2] Building CXX object CMakeFiles/cmTC_ae28a.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_ae28a
+Run Build Command:"/usr/bin/ninja" "cmTC_716e3"
+[1/2] Building CXX object CMakeFiles/cmTC_716e3.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_716e3
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -355,11 +355,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_ae28a"
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_71169"
-[1/2] Building CXX object CMakeFiles/cmTC_71169.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_71169
+Run Build Command:"/usr/bin/ninja" "cmTC_5dbd1"
+[1/2] Building CXX object CMakeFiles/cmTC_5dbd1.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_5dbd1
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -422,11 +422,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_71169"
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_fa5da"
-[1/2] Building CXX object CMakeFiles/cmTC_fa5da.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_fa5da
+Run Build Command:"/usr/bin/ninja" "cmTC_a767a"
+[1/2] Building CXX object CMakeFiles/cmTC_a767a.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_a767a
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -489,11 +489,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_fa5da"
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
+Change Dir: /home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_af1b3"
-[1/2] Building CXX object CMakeFiles/cmTC_af1b3.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_af1b3
+Run Build Command:"/usr/bin/ninja" "cmTC_a500a"
+[1/2] Building CXX object CMakeFiles/cmTC_a500a.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_a500a
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

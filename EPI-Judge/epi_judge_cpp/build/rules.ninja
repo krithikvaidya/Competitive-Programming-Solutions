@@ -4203,7 +4203,7 @@ rule CXX_EXECUTABLE_LINKER__rook_attack
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -H/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp -B/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPIJudge/epi_judge_cpp/build
+  command = /usr/bin/cmake -H/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp -B/home/krithik/Desktop/Git/Competitive-Programming-Solutions/EPI-Judge/epi_judge_cpp/build
   description = Re-running CMake...
   generator = 1
 
