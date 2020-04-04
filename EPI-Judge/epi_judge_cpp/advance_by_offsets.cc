@@ -3,8 +3,22 @@
 #include "test_framework/generic_test.h"
 using std::vector;
 bool CanReachEnd(const vector<int>& max_advance_steps) {
-  // TODO - you fill in here.
-  return true;
+
+
+  int end_index = max_advance_steps.size() - 1;
+  int curr_index = 0;
+  int max_possb_next_index = 0;
+
+  while (curr_index <= max_possb_next_index && max_possb_next_index < end_index)
+  {
+
+    if (curr_index + max_advance_steps[curr_index] > max_possb_next_index)
+      max_possb_next_index = curr_index + max_advance_steps[curr_index];
+
+    curr_index++;
+  }
+
+  return max_possb_next_index >= end_index ? true : false;
 }
 
 int main(int argc, char* argv[]) {
