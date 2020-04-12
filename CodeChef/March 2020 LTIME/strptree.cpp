@@ -23,50 +23,13 @@ int main()
         cin >> D;
         long long curr_pow2 = 1ll;
         long long temp = pow (2ll, D);
-
-        long long mult = 1ll, temp2 = 0ll, temp3 = 2ll;
-        for (long long k = 1ll; k <= D; k++)
-        {   
-            if (mult == 2ll)
-            {
-                temp2 += 2ll * temp3;
-                mult = 1ll;
-            }
-            else
-            {
-                temp2 += temp3;
-                mult = 2ll;
-            }
-            
-            temp3 *= 2;
-        }
-        int z;
-        if (D & 1)
-            z = 1;
-        else
-        {
-            z = 0;
-        }
         
         for (long long j = 0ll; j <= D; j++)
         {
             Q += 2ll * C(curr_pow2);
-            Q += curr_pow2 * // no of nodes in other subtree * // no of nodes at that level;
-            
-            // add no of fail in own subtree for every node at that level
-            Q += (curr_pow2) * temp3;
-           
+            Q += curr_pow2 * (pow (2, D - j));
             curr_pow2 *= 2ll;
-            
-            temp /= 2;
-            if (z)
-                temp3 -= (pow(2ll, D - j));
-            else
-            {
-                temp3 -= 2 * (pow(2ll, D - j));
-            }
-            
-            z ^= 1;
+
         }
 
         

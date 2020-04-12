@@ -21,15 +21,20 @@ int main()
         digits_used = 2ll;
 
         curr_sum += d0 + d1;
-        long long curr_val = d0 * 10ll + d1;
-        while (curr_sum % 10ll != 8ll && digits_used < k)
+        bool flag = false;
+
+        while ( digits_used < k && ((digits_used == 2ll) || (curr_sum % 10ll != 8ll )))
         {
-            curr_val = curr_val * 10ll + (curr_sum % 10ll);
-            curr_sum += (curr_val % 10ll);
+            curr_sum += (curr_sum % 10ll);
             digits_used++;
+            if (curr_sum % 10ll == 0ll)
+            {
+                flag = true;
+                break;
+            }
         }
 
-        if (digits_used == k)
+        if (digits_used == k || flag)
         {
             if (curr_sum % 3ll == 0ll)
                 cout << "YES\n";
