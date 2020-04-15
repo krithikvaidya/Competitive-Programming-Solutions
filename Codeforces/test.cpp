@@ -8,16 +8,11 @@ using namespace std;
 int main()
 {
 
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
+    vector <int> vec = { 2, 4, 4, 10, 12};
 
-    int t;
-    cin >> t;
+    int val1 = 1;
+    int val2 = 13;
 
-    for (int i = 0; i < t; i++)
-    {
-        
-
-    }
+    cout << lower_bound(vec.begin(), vec.end(), val2) - vec.begin();
 
 }
