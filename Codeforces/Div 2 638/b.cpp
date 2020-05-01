@@ -16,14 +16,8 @@ int main()
 
     for (int i = 0; i < t; i++)
     {
-        int a, b, c, d, x, y, z;
-        cin >> a >> b >> c >> d;
+        
 
-        x = b;
-        y = c;
-        z = c;
-
-        cout << x << " " << y << " " << z << "\n";
     }
 
 }

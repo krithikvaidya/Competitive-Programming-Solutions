@@ -16,14 +16,15 @@ int main()
 
     for (int i = 0; i < t; i++)
     {
-        int a, b, c, d, x, y, z;
-        cin >> a >> b >> c >> d;
+        int n, a, b, c, d;
+        cin >> n >> a >> b >> c >> d;
 
-        x = b;
-        y = c;
-        z = c;
-
-        cout << x << " " << y << " " << z << "\n";
+        if (n * (a - b) > c + d || n * (a + b) < c - d)
+            cout << "No\n";
+        else
+        {
+            cout << "Yes\n";
+        }
+    
     }
-
 }

@@ -16,7 +16,21 @@ int main()
 
     for (int i = 0; i < t; i++)
     {
+        int x, n, m;
+        cin >> x >> n >> m;
+
+        while (x >= 21 && n > 0)
+        {
+            n--;
+            x = (x / 2) + 10;
+        }
+
+        if (x > 10 * m)
+            cout << "NO\n";
+        else
+            cout << "YES\n";
         
+
 
     }
 
