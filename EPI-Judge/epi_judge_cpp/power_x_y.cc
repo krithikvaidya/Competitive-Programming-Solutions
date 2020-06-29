@@ -5,18 +5,19 @@ double Power(double x, int y) {
 
   if (y < 0)
   {
-    y = -y;
     x = 1 / x;
+    y = -y;
   }
 
-  while (y) {
-
+  while (y)
+  {
     if (y & 1)
+    {
       result *= x;
+    }
 
     x *= x;
     y >>= 1;
-
   }
 
   return result;

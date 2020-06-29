@@ -16,8 +16,18 @@ int main()
 
     for (int i = 0; i < t; i++)
     {
-        
+        int a, b;
+        cin >> a >> b;
 
+        int c = max (a, b);
+        int d = min (a, b);
+        if (c >= 2 * d)
+            cout << c * c << "\n";
+        else
+        {
+            cout << 4 * d * d << "\n";
+        }
+        
     }
 
 }

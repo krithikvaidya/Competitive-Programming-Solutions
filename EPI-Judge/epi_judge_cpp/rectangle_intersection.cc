@@ -11,13 +11,18 @@ struct Rect {
   int x, y, width, height;
 };
 
+bool operator==(const Rect& r1, const Rect& r2) {
+  return std::tie(r1.x, r1.y, r1.width, r1.height) ==
+         std::tie(r2.x, r2.y, r2.width, r2.height);
+}
+
+
 Rect IntersectRectangle(const Rect& r1, const Rect& r2) {
   
-  bool flag = true;
-  if (r1.y > r2.y + r2.height || r1.y + r1.height < r2.y)
-    flag = false;  // y-disjoint
-  if (r1.x > r2.x + r2.width || r1.x + r1.width < r2.x)
-    flag = false;  // x-disjoint
+  Rect min_x = min (r1.x, r2.x) == r1.x ? r1 : r2;
+  Rect max_x = (min_x == r1) ? r2 : r1;
+  Rect min_y = min (r1.y, r2.y) == r1.y ? r1 : r2;
+  Rect max_y = (min_y == r1) ? r2 : r1;
 
   Rect rect;
   rect.x = 0;
@@ -25,35 +30,59 @@ Rect IntersectRectangle(const Rect& r1, const Rect& r2) {
   rect.width = -1;
   rect.height = -1;
 
-  if(flag)
+  if (min_x.x + min_x.width >= max_x.x)
   {
-    if(r1.y < r2.y)
+    if (min_y.y + min_y.height >= max_y.y)
     {
-      rect.y = r2.y;
-    }
-    else
-    {
-      rect.y = r1.y;
-    }
 
-    if(r1.x < r2.x)
-      rect.x = r2.x;
-    else
-    {
-      rect.x = r1.x;
+      rect.x = max_x.x;
+      rect.y = max_y.y;
+      rect.width = min (min_x.x + min_x.width, max_x.x + max_x.width) - max_x.x;
+      rect.height = min (min_y.y + min_y.height, max_y.y + max_y.height) - max_y.y;
+
     }
-
-    rect.height = min((r1.y + r1.height - rect.y), (r2.y + r2.height - rect.y));
-    rect.width = min((r1.x + r1.width - rect.x), (r2.x + r2.width - rect.x));
-
   }
 
   return rect;
+
+  // bool flag = true;
+  // if (r1.y > r2.y + r2.height || r1.y + r1.height < r2.y)
+  //   flag = false;  // y-disjoint
+  // if (r1.x > r2.x + r2.width || r1.x + r1.width < r2.x)
+  //   flag = false;  // x-disjoint
+
+  // Rect rect;
+  // rect.x = 0;
+  // rect.y = 0;
+  // rect.width = -1;
+  // rect.height = -1;
+
+  // if(flag)
+  // {
+  //   if(r1.y < r2.y)
+  //   {
+  //     rect.y = r2.y;
+  //   }
+  //   else
+  //   {
+  //     rect.y = r1.y;
+  //   }
+
+  //   if(r1.x < r2.x)
+  //     rect.x = r2.x;
+  //   else
+  //   {
+  //     rect.x = r1.x;
+  //   }
+
+  //   rect.height = min((r1.y + r1.height - rect.y), (r2.y + r2.height - rect.y));
+  //   rect.width = min((r1.x + r1.width - rect.x), (r2.x + r2.width - rect.x));
+
+  // }
+
+  // return rect;
 }
-bool operator==(const Rect& r1, const Rect& r2) {
-  return std::tie(r1.x, r1.y, r1.width, r1.height) ==
-         std::tie(r2.x, r2.y, r2.width, r2.height);
-}
+
 
 namespace test_framework {
 template <>

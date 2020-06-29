@@ -2,35 +2,41 @@
 
 unsigned long long SwapBits(unsigned long long x, int i, int j) {
   
-  if (((x >> i) & 1) != ((x >> j) & 1))
+  if (((x >> i) & 1) ^ ((x >> j) & 1))
   {
-    long long y = (1ll << i) | (1ll << j);  
-    x = x ^ y;
+    x ^= (1 << i);
+    x ^= (1 << j);
   }
+
   return x;
+
 }
 
 unsigned long long ReverseBits(unsigned long long x) {
 
-  unsigned long long precomputed_reverse[65536];
-  for (unsigned long long i = 0ll; i < 65536; i++)
-  {
-    unsigned long long temp = i;
-    for(int j = 0; j < 8; j++)
-    {
-      int k = 15 - j;
-      temp = SwapBits(temp, j, k);
-    }
+  unsigned long long int precomputed_reverse[65536];
+  unsigned long long int temp;
 
+  for (int i = 0; i < 65536; i++)
+  {
+
+    temp = i;
+
+    for (int j = 0; j < 8; j++)
+      temp = SwapBits (temp, j, 15 - j);
+    
     precomputed_reverse[i] = temp;
+
   }
 
-  const int kMaskSize = 16;
-  const int kBitMask = 0xFFFF;
-  return precomputed_reverse[x & kBitMask] << (3 * kMaskSize) |
-         precomputed_reverse[(x >> kMaskSize) & kBitMask] << (2 * kMaskSize) |
-         precomputed_reverse[(x >> (2 * kMaskSize)) & kBitMask] << kMaskSize |
-         precomputed_reverse[(x >> (3 * kMaskSize)) & kBitMask];
+  int mask_length = 16;
+  int mask = 0xFFFF;
+
+  return (precomputed_reverse[(x & mask)] << (mask_length * 3)) ^ 
+      (precomputed_reverse[((x >> mask_length) & mask)] << (mask_length * 2)) ^
+      (precomputed_reverse[((x >> (mask_length * 2)) & mask)] << (mask_length)) ^
+      (precomputed_reverse[((x >> (mask_length * 3)) & mask)]);
+
 }
 
 int main(int argc, char* argv[]) {
