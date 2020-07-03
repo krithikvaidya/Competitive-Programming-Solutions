@@ -8,7 +8,53 @@
 
 shared_ptr<ListNode<int>> OverlappingLists(shared_ptr<ListNode<int>> l0,
                                            shared_ptr<ListNode<int>> l1) {
-  // TODO - you fill in here.
+  
+  if (!l0 || !l1)
+    return nullptr;
+
+  int len1 = 0, len2 = 0;
+
+  auto it = l0;
+
+  while (it)
+  {
+    len1++;
+    it = it -> next;
+  }
+
+  it = l1;
+
+  while (it)
+  {
+    len2++;
+    it = it -> next;
+  }
+
+  if (len2 > len1)
+  {
+    for (int i = 0; i < abs (len2 - len1); i++)
+    {
+      l1 = l1 -> next;
+    }
+  }
+
+  else
+  {
+    for (int i = 0; i < abs (len2 - len1); i++)
+    {
+      l0 = l0 -> next;
+    }
+  }
+  
+  while (l0 && l1)
+  {
+    if (l0 == l1)
+      return l0;
+    
+    l0 = l0 -> next;
+    l1 = l1 -> next;
+  }
+
   return nullptr;
 }
 void OverlappingListsWrapper(TimedExecutor& executor,

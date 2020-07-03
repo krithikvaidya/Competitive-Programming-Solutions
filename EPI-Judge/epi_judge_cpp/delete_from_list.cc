@@ -7,7 +7,11 @@ using std::shared_ptr;
 
 // Delete the node past this one. Assume node is not a tail.
 void DeleteAfter(const shared_ptr<ListNode<int>>& node) {
-  // TODO - you fill in here.
+  
+  shared_ptr<ListNode<int>> next = node -> next;
+  node -> next = node -> next -> next;
+  next.reset();
+
   return;
 }
 shared_ptr<ListNode<int>> DeleteFromListWrapper(

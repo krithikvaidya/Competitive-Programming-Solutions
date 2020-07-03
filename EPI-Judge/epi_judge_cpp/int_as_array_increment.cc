@@ -4,27 +4,17 @@
 using std::vector;
 vector<int> PlusOne(vector<int> A) {
   
-  int i;
-  
+  int i, carry;
 
-  for (i = A.size() - 1; i >= 0; i--)
+  for (i = A.size() - 1, carry = 0; i >= 0; i--)
   {
-    A[i] += 1;
-    if (A[i] == 10)
-    {
-      A[i] = 0;
-    }
-    else
-    {
+    A[i] = (A[i] + 1) % 10;
+    if (A[i] != 0)
       break;
-    }
   }
-
 
   if (i == -1)
-  {
-    A.insert(A.begin(), 1);
-  }
+    A.insert (A.begin(), 1);
 
   return A;
 }

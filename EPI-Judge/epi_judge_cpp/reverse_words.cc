@@ -5,7 +5,30 @@
 using std::string;
 
 void ReverseWords(string* s) {
-  // TODO - you fill in here.
+  
+  string reversed = "";
+  string curr_word = "";
+
+  for (int i = s -> size() - 1; i >= 0; i--)
+  {
+    if (*(s + i) == ' ')
+    {
+      reversed += {curr_word.rbegin(), curr_word.rend()};
+      reversed += " ";
+      curr_word = "";
+    }
+    else
+    {
+      curr_word += s1[i];
+    }
+    
+  }
+
+  reversed += {curr_word.rbegin(), curr_word.rend()};
+
+  std::cout << "\n\n" << reversed << "\n\n";
+  *s = reversed;
+
   return;
 }
 string ReverseWordsWrapper(TimedExecutor& executor, string s) {

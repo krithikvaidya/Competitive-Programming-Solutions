@@ -8,21 +8,22 @@ int DeleteDuplicates(vector<int>* A_ptr) {
   
   vector<int>& A = *A_ptr;
 
-  if (A.size() == 0)
+  if (!A.size())
     return 0;
 
-  int total_valid = 1, prev_val = A[0], prev_index = 1;
+  int uniq_ctr = 1;
 
-  for (int a: A)
+  for (int curr_ctr = 1; curr_ctr < A.size(); curr_ctr++)
   {
-    if (a != prev_val)
+    if (A[curr_ctr] != A[curr_ctr - 1])
     {
-      total_valid++;
-      prev_val = a;
-      A[prev_index++] = a;
+      A[uniq_ctr] = A[curr_ctr];
+      uniq_ctr++;
     }
   }
-  return total_valid;
+
+  return uniq_ctr;
+
 }
 vector<int> DeleteDuplicatesWrapper(TimedExecutor& executor, vector<int> A) {
   int end = executor.Run([&] { return DeleteDuplicates(&A); });

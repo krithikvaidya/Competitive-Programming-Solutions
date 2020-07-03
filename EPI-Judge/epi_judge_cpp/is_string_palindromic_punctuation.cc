@@ -3,7 +3,24 @@
 #include "test_framework/generic_test.h"
 using std::string;
 bool IsPalindrome(const string& s) {
-  // TODO - you fill in here.
+  
+  int i = 0, j = s.size() - 1;
+
+  while (i < j)
+  {
+    
+    while (i < j && !isalnum(s[i]))
+      i++;
+    while (j > i && !isalnum(s[j]))
+      j--;
+    
+    if (std::tolower(s[i]) != std::tolower(s[j]))
+      return false;
+
+    i++;
+    j--;
+  }
+
   return true;
 }
 
