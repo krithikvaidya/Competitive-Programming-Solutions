@@ -10,9 +10,27 @@ using std::array;
 using std::stack;
 using std::vector;
 const int kNumPegs = 3;
+
+void PerformsShifts (vector<vector<int>>& from_to, int num_rings, int from, int to, int aux)
+{
+  if (num_rings == 0)
+    return;
+
+  PerformsShifts (from_to, num_rings - 1, from, aux, to);
+
+  from_to.push_back ({ from, to });
+
+  PerformsShifts (from_to, num_rings - 1, aux, to, from);
+
+}
+
 vector<vector<int>> ComputeTowerHanoi(int num_rings) {
-  // TODO - you fill in here.
-  return {};
+  
+  vector<vector<int>> from_to;
+
+  PerformsShifts (from_to, num_rings, 0, 1, 2);
+
+  return from_to;
 }
 void ComputeTowerHanoiWrapper(TimedExecutor& executor, int num_rings) {
   array<stack<int>, kNumPegs> pegs;

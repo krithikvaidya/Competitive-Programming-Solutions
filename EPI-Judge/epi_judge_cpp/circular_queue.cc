@@ -1,20 +1,85 @@
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
+
+using std::length_error;
+using namespace std;
+
 class Queue {
+
+
+ private:
+  
+  int front;
+  int back;
+  int capacity;
+  int size;
+  int* arr;
+
  public:
-  Queue(size_t capacity) {}
+  
+  Queue(size_t capacity) {
+    arr = new int[capacity]; 
+    front = -1;
+    back = 0;
+    capacity = capacity;
+    size = 0;
+  }
+
   void Enqueue(int x) {
-    // TODO - you fill in here.
+    
+    cout << "\nEnqueue: " << x << "\nSize: " << size << "\n";
+    if (back == front)
+    {
+      throw length_error("queue is full");
+    }
+
+    if (back == capacity)
+    {
+      back = 0;
+      Enqueue (x);
+      return;
+    }
+
+    if (front == -1)
+      front++;
+
+    arr[back] = x;
+    back++;
+    size++;
+
     return;
   }
+
+
   int Dequeue() {
-    // TODO - you fill in here.
-    return 0;
+    
+    cout << "\nDequeue." << "\nSize: " << size << "\n";
+    if (front == -1)
+      throw length_error("queue is empty");
+
+    int toret = arr[front];
+
+    size--;
+    front++;
+
+    if (back == front)
+    {
+      front = -1;
+      back = 0;
+    }
+
+    if (front == capacity)
+      front = 0;
+
+    return toret;
   }
+
   int Size() const {
-    // TODO - you fill in here.
-    return 0;
+
+    cout << "\nSize: " << size << "\n";
+    return size;
+    
   }
 };
 struct QueueOp {

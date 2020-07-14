@@ -7,22 +7,73 @@ using std::length_error;
 
 class Stack {
  public:
+
   bool Empty() const {
-    // TODO - you fill in here.
-    return true;
+
+    if (st.empty())
+      return true;
+    
+    return false;
   }
+
   int Max() const {
-    // TODO - you fill in here.
-    return 0;
+    
+    if (Empty())
+      throw length_error("empty stack");/* code */
+
+    return max_stack.top().val;
   }
+
   int Pop() {
-    // TODO - you fill in here.
-    return 0;
+    
+    if (Empty())
+      throw length_error("empty stack");
+
+    int popped = st.top();
+    st.pop();
+
+    if (popped == max_stack.top().val)
+    {
+      int &count = max_stack.top().count;
+      if (count == 1)
+        max_stack.pop();
+      else
+      {
+        count--;
+      }
+      
+    }
+
+    return popped;
   }
+
   void Push(int x) {
-    // TODO - you fill in here.
+    
+    st.emplace (x);
+
+    if (max_stack.empty() || x > max_stack.top().val)  
+      max_stack.emplace (MaxAndCount{x, 1});
+
+    else if (x == max_stack.top().val)
+    {
+      int &count = max_stack.top().count;
+      count++;
+    }
+
     return;
   }
+
+  private:
+
+   std::stack <int> st;
+
+   struct MaxAndCount {
+
+     int val, count;
+
+   };
+
+   std::stack <MaxAndCount> max_stack;
 };
 struct StackOp {
   std::string op;

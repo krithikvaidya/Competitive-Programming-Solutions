@@ -6,16 +6,40 @@
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
 using std::length_error;
+using namespace std;
+
 class Queue {
+
+ private:
+  stack<int> st1;
+  stack<int> st2;
  public:
   void Enqueue(int x) {
-    // TODO - you fill in here.
+    st1.push (x);
     return;
   }
   int Dequeue() {
-    // TODO - you fill in here.
-    return 0;
+    
+    if (st2.empty() && st1.empty())
+      throw length_error ("Queue is empty!");
+
+    if (st2.empty())
+    {
+      while (!st1.empty())
+      {
+        st2.push (st1.top());
+        st1.pop();
+      }
+    }
+
+    int ret = st2.top();
+    st2.pop();
+
+    return ret;
   }
+
+
+
 };
 struct QueueOp {
   enum class Operation { kConstruct, kDequeue, kEnqueue } op;
