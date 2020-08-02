@@ -5,8 +5,23 @@ using std::vector;
 
 int NumCombinationsForFinalScore(int final_score,
                                  const vector<int>& individual_play_scores) {
-  // TODO - you fill in here.
-  return 0;
+  
+  vector<int> plays_count;
+  plays_count.push_back (1);
+
+  for (int i = 1; i <= final_score; i++) {
+
+    plays_count.push_back (0);
+
+    for (int score: individual_play_scores) {
+      if (i - score >= 0) {
+        plays_count[i] += plays_count[i - score];
+      }
+    }
+
+  }
+
+  return plays_count[final_score];
 }
 
 int main(int argc, char* argv[]) {

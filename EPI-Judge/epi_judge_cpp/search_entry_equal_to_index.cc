@@ -6,7 +6,9 @@
 using std::vector;
 
 int SearchEntryEqualToItsIndex(const vector<int>& A) {
-  // TODO - you fill in here.
+  
+  
+  
   return 0;
 }
 void SearchEntryEqualToItsIndexWrapper(TimedExecutor& executor,
