@@ -8,9 +8,27 @@ struct Interval {
   int left, right;
 };
 
+bool sort_interval (const Interval& in1, const Interval& in2) {
+  return in1.left < in2.left;
+}
+
 int FindMinimumVisits(vector<Interval> intervals) {
-  // TODO - you fill in here.
-  return 0;
+  
+  sort (intervals.begin(), intervals.end(), sort_interval);
+
+  int vc = 1;
+  int max_val = intervals[0].right;
+
+  for (int i = 1; i < intervals.size(); i++) {
+
+    if (intervals[i].left <= max_val) continue;
+
+    vc++;
+    max_val = intervals[i].right;
+
+  }
+
+  return vc;
 }
 namespace test_framework {
 template <>
