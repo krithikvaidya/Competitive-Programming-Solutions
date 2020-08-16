@@ -16,10 +16,33 @@ struct BinaryTreeNode {
   int size;
 };
 
+
+BinaryTreeNode<int>* get_kth (BinaryTreeNode<int>* curr, int node_reqd) {
+
+  if (curr == nullptr)  return nullptr;
+
+  int left_size = curr -> left ? curr -> left -> size : 0;
+
+  if (left_size + 1 == node_reqd) {
+    return curr;
+  }
+  
+  if (left_size && left_size >= node_reqd) {
+    return get_kth (curr -> left.get(), node_reqd);
+  }
+
+
+  return get_kth (curr -> right.get(), node_reqd - (1 + left_size));
+
+}
+
 const BinaryTreeNode<int>* FindKthNodeBinaryTree(
     const unique_ptr<BinaryTreeNode<int>>& tree, int k) {
-  // TODO - you fill in here.
-  return nullptr;
+
+  if (tree == nullptr)  return nullptr;
+  
+  return get_kth (tree.get(), k);
+
 }
 namespace test_framework {
 template <typename KeyT>
